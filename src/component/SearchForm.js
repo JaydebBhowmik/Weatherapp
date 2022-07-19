@@ -1,6 +1,7 @@
 
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import {KEY} from '../env'
 
 import './SearchForm.css';
 import Moment from 'moment';
@@ -11,16 +12,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 function SearchForm() {
-    // http://api.weatherapi.com/v1/forecast.json?key=f87ad26c9cc440d69d444644221607&q=London&days=7&aqi=yes&alerts=yes
-    
-    const apiKey = "f87ad26c9cc440d69d444644221607";
-    
     const [data, setData] = useState("");
     const [inputCity, setInputCity] = useState("");
 
     const getWeatherDetails = (cityName) => {
         if(!cityName) return
-        const apiUrl = "http://api.weatherapi.com/v1/forecast.json?key="+ apiKey +"&q=" + cityName +"&days=10&aqi=yes&alerts=yes"
+        const apiUrl = "http://api.weatherapi.com/v1/forecast.json?key="+ KEY +"&q=" + cityName +"&days=10&aqi=yes&alerts=yes"
         axios.get(apiUrl).then((res) => {
             console.log("response", res.data)
             setData(res.data)

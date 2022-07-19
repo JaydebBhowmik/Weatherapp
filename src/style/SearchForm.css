@@ -1,0 +1,41 @@
+.searchCity {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+.searchField {
+    padding: 10px;
+    border: 1px solid #f1f1f1;
+    border-radius: 3px 0px 0 3px;
+    width: 30%;
+}
+.primary {
+    padding: 10px;
+    border: none;
+    border-radius: 0 3px 3px 0;
+}
+.current-city {
+    font-size: 60px;
+    font-weight: 600;
+}
+.current-date {
+    display: block;
+}
+
+.left-box {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: end; */
+}
+
+.ctemp {
+    display: flex;
+    align-items: center;
+}
+
+.ctemp-unit {
+    font-size: 40px;
+    font-weight: 500;
+}
