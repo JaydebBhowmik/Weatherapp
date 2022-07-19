@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import {KEY} from '../env'
 
-import './SearchForm.css';
+import '../style/SearchForm.css';
 import Moment from 'moment';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
@@ -25,7 +25,6 @@ function SearchForm() {
             console.log("Error", err)
         })
     }
-    
     const handleChangeInput = (e) => {
         setInputCity(e.target.value)
         // console.log("value", e.target.value) 
@@ -40,6 +39,7 @@ function SearchForm() {
     
     // const forecast = data.forecast;
     // console.log(forecast.forecastday);
+
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const currentdate = data.current.last_updated
     const formatDate = Moment(currentdate).format("MMM Do");

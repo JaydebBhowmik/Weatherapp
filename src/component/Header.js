@@ -1,4 +1,4 @@
-import './Header.css'
+import '../style/Header.css'
 import React from 'react'
 
 function Header() {
