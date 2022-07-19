@@ -12,7 +12,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 function SearchForm() {
-    // const [data, setData] = useState();
+    // const [data, setData] = useState([]);
     const [inputCity, setInputCity] = useState();
     const [currentdate, setCurrentdate] = useState('')
     const [name, setName] = useState('')
@@ -105,9 +105,9 @@ function SearchForm() {
                 <hr />
                 <Row>
                     {
-                        forecastday.map((items, index) =>
+                        forecastday.map((items, key) =>
                         <Col className='mt-5'>
-                            <div key={index}>
+                            <div key={key}>
                                 <h5> <strong>{days[new Date(items.date).getDay()]}</strong> </h5>
                                 <img alt='icon' src={items.day.condition.icon}/>
                                 <h4> {parseInt(items.day.maxtemp_c)}°C {parseInt(items.day.mintemp_c)}°C  </h4>
